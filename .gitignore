@@ -1,3 +1,45 @@
+# IntellijIdea files
+**/.idea
+
+# Нод модули во всех каталогах
+**/node_modules
+
+# Компоненты Bower
+**/bower_components/
+
+# Дополнительно:
+**/dist
+**.DS_Store
+**/*.pyc
+**/.vs/
+**/.vscode
+
+# Кэши сасс файлов и пайчарма
+**/.sass-cache
+**/__pycache__
+
+# локальные файлы, использовались для секретов, но теперь они вне проекта
+**/local__*
+
+# База данных
+**/db.sqlite3
+
+# Миграции
+**/migrations
+
+# Виртуальное окружение проекта
+**/env
+**/venv
+**/virtualenv
+**/environment
+**/virtual_environment
+**/venv_3_8
+**/venv38
+**/venv_3_9
+**/venv39
+
+
+# Гитигноре препода: (не покрывает всё, что нужно, дополнил своим выше)
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template
 # Byte-compiled / optimized / DLL files
