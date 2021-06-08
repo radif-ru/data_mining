@@ -22,6 +22,7 @@ tag_post = Table(
     Column("tag_id", Integer, ForeignKey("tag.id")),
 )
 
+
 # author_post = Table(
 #     'author_post',
 #     Base.metadata,

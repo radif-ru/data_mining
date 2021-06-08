@@ -71,7 +71,9 @@ class GbBlogParse:
         self.tasks_creator(
             set(
                 urljoin(response.url, itm.attrs.get('href'))
-                for itm in post_wrapper.find_all("a", attrs={"class": "post-item__title"}) if
+                for itm in
+                post_wrapper.find_all("a", attrs={"class": "post-item__title"})
+                if
                 itm.attrs.get("href")
             ),
             self.parse_post
@@ -82,19 +84,25 @@ class GbBlogParse:
         author_name_tag = soup.find('div', attrs={"itemprop": "author"})
         data = {
             "post_data": {
-                "title": soup.find("h1", attrs={"class": "blogpost-title"}).text,
+                "title": soup.find("h1",
+                                   attrs={"class": "blogpost-title"}).text,
                 "url": response.url,
+                "date_published":
+                    soup.find(itemprop="datePublished")["datetime"],
                 "id": int(soup.find("comments").attrs.get("commentable-id")),
             },
             "author_data": {
-                "url": urljoin(response.url, author_name_tag.parent.attrs.get("href")),
+                "url": urljoin(response.url,
+                               author_name_tag.parent.attrs.get("href")),
                 "name": author_name_tag.text,
             },
             "tags_data": [
-                {"name": tag.text, "url": urljoin(response.url, tag.attrs.get("href"))}
+                {"name": tag.text,
+                 "url": urljoin(response.url, tag.attrs.get("href"))}
                 for tag in soup.find_all("a", attrs={"class": "small"})
             ],
-            "comments_data": self._get_comments(soup.find("comments").attrs.get("commentable-id")),
+            "comments_data": self._get_comments(
+                soup.find("comments").attrs.get("commentable-id")),
         }
         self._save(data)
 

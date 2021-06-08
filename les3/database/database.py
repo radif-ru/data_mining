@@ -54,10 +54,13 @@ class Database:
 
     def add_post(self, data):
         session = self.maker()
-        post = self.get_or_create(session, models.Post, "id", data["post_data"])
-        post.author = self.get_or_create(session, models.Author, "url", data['author_data'])
+        post = self.get_or_create(session, models.Post, "id",
+                                  data["post_data"])
+        post.author = self.get_or_create(session, models.Author, "url",
+                                         data['author_data'])
         post.tags.extend(map(
-            lambda tag_data: self.get_or_create(session, models.Tag, "url", tag_data),
+            lambda tag_data: self.get_or_create(session, models.Tag, "url",
+                                                tag_data),
             data["tags_data"],
         ))
         session.add(post)
