@@ -87,8 +87,8 @@ class GbBlogParse:
                 "title": soup.find("h1",
                                    attrs={"class": "blogpost-title"}).text,
                 "url": response.url,
-                "date_published":
-                    soup.find(itemprop="datePublished")["datetime"],
+                # "date_published":
+                #     soup.find(itemprop="datePublished")["datetime"],
                 "id": int(soup.find("comments").attrs.get("commentable-id")),
             },
             "author_data": {
