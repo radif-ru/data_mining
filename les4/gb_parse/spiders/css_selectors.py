@@ -19,6 +19,20 @@ def get_author_id(resp):
             pass
 
 
+# def get_author_number(resp):
+#     marker = "window.transitState = decodeURIComponent"
+#     for script in resp.css("script"):
+#         try:
+#             if marker in script.css("::text").extract_first():
+#                 re_pattern = re.compile(
+#                     r"advertId%22%2C%22([a-zA-Z|\d]+)%22%2C%22data")
+#                 result = re.findall(re_pattern,
+#                                     script.css("::text").extract_first())
+#                 return result
+#         except TypeError:
+#             pass
+
+
 BRANDS = {
     "selector": ".TransportMainFilters_brandsList__2tIkv a.blackLink",
     "callback": "brand_parse",

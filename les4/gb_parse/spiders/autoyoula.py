@@ -1,4 +1,5 @@
 from base64 import b64decode
+from urllib.parse import urljoin
 
 import pymongo
 import requests
@@ -45,10 +46,12 @@ class AutoyoulaSpider(scrapy.Spider):
             self.name].insert_one(data)
 
 
-def get_author_number(resp):
+def get_author_number(resp: scrapy.Request) -> str:
     post_url = resp.url
     post_id = post_url[post_url.find('--') + 2:]
-    data_url = f'https://auto.youla.ru/api/get-similar-adverts/?advertId={post_id}'
+    data_url = urljoin(
+        'https://auto.youla.ru/api/get-similar-adverts/',
+        f'?advertId={post_id}')
     response = requests.get(data_url)
     if response.status_code == 200:
         phone_number = response.json()[0]['phone']
