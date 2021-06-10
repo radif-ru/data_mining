@@ -38,13 +38,13 @@ class HhRemoteWorkSpider(scrapy.Spider):
             '//p[@class="vacancy-salary"]/span/text()').extract())
         loader.add_value('salary', salary)
         required_experience = ''.join(response.xpath(
-            '//div[@class="vacancy-description"]/div[1]/div[1]/p[1]//text()'
+            '//div[@class="vacancy-description"]/div[1]//p[1]//text()'
         ).extract())
         employment = ''.join(response.xpath(
-            '//div[@class="vacancy-description"]/div[1]/div[1]/p[2]//text()'
+            '//div[@class="vacancy-description"]/div[1]//p[2]//text()'
         ).extract())
         detailed = ''.join(response.xpath(
-            '//div[@itemprop="description"]//text()').extract())
+            '//div[@data-qa="vacancy-description"]//text()').extract())
 
         description = {
             'required_experience': required_experience,
