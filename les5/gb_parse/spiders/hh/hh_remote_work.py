@@ -2,6 +2,7 @@ import scrapy
 import pymongo
 
 from .loaders import HhVacanciesLoader, HhEmployersLoader
+from .processors import clear_employer_title
 from .xpath_selectors import PAGINATION, VACANCY, EMPLOYER
 
 
@@ -67,10 +68,10 @@ class HhRemoteWorkSpider(scrapy.Spider):
         loader.add_value('item_type', 'employer')
         loader.add_value('url', response.url)
 
-        title = response.xpath(EMPLOYER['title_vars'][0]).extract_first() \
-                or ''.join(response.xpath(EMPLOYER['title_vars'][1])
-                           .extract()).replace('\u202f', ' ') \
-                    .replace('\n', '').replace('  ', '')
+        title = clear_employer_title(
+            response.xpath(EMPLOYER['title_vars'][0]).extract()) \
+                or clear_employer_title(
+            response.xpath(EMPLOYER['title_vars'][1]).extract())
         loader.add_value('title', title)
 
         website = response.xpath(EMPLOYER['website_vars'][0]).extract_first() \

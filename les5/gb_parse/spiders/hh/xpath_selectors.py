@@ -22,6 +22,7 @@ VACANCY = {
 
 EMPLOYER = {
     'title_vars': [
+        '//div[@class="company-header"]'
         '//span[@class="company-header-title-name"]//text()',
         '//div[@class="tmpl_hh_home_intro__title"]//text()'
     ],
