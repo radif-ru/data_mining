@@ -4,6 +4,9 @@ from scrapy.loader import ItemLoader
 
 class HhVacanciesLoader(ItemLoader):
     default_item_class = dict
+    item_type_out = TakeFirst()
+    url_out = TakeFirst()
+
     title_out = TakeFirst()
     salary_out = TakeFirst()
     description_out = TakeFirst()
@@ -13,6 +16,9 @@ class HhVacanciesLoader(ItemLoader):
 
 class HhEmployersLoader(ItemLoader):
     default_item_class = dict
+    item_type_out = TakeFirst()
+    url_out = TakeFirst()
+
     title_out = TakeFirst()
     website_out = TakeFirst()
     # activity_out = TakeFirst()
