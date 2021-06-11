@@ -23,4 +23,4 @@ class HhEmployersLoader(ItemLoader):
     website_out = TakeFirst()
     # activity_out = TakeFirst()
     description_out = TakeFirst()
-    # other_vacancies_out = TakeFirst()
+    other_vacancies_out = TakeFirst()

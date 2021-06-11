@@ -81,7 +81,7 @@ class HhRemoteWorkSpider(scrapy.Spider):
         activity = response.xpath(EMPLOYER['activity']).extract()
         loader.add_value('activity', activity)
 
-        description = response.xpath(VACANCY['description']).extract()
+        description = response.xpath(EMPLOYER['description']).extract()
         loader.add_value('description', description)
 
         other_vacancies = response.urljoin(
@@ -89,4 +89,5 @@ class HhRemoteWorkSpider(scrapy.Spider):
         loader.add_value('other_vacancies', other_vacancies)
 
         yield loader.load_item()
-        yield response.follow(other_vacancies, callback=self.parse)
+        if other_vacancies:
+            yield response.follow(other_vacancies, callback=self.parse)

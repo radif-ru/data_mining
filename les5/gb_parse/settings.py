@@ -11,7 +11,7 @@ BOT_NAME = 'gb_parse_18_05'
 
 LOG_ENABLE = True
 LOG_LEVEL = "DEBUG"
-# LOG_FILE = 'log.txt'
+LOG_FILE = 'log.txt'
 
 SPIDER_MODULES = ['gb_parse.spiders']
 NEWSPIDER_MODULE = 'gb_parse.spiders'
