@@ -20,6 +20,7 @@ itemloaders==1.0.4
 jmespath==0.10.0
 lxml==4.6.3
 parsel==1.6.0
+Pillow==8.2.0
 priority==1.3.0
 Protego==0.1.16
 pyasn1==0.4.8
@@ -31,12 +32,14 @@ pyOpenSSL==20.0.1
 queuelib==1.6.1
 requests==2.25.1
 Scrapy==2.5.0
+scrapy-rotating-proxies==0.6.2
 service-identity==21.1.0
 six==1.16.0
 soupsieve==2.2.1
 SQLAlchemy==1.4.17
 Twisted==21.2.0
 twisted-iocpsupport==1.0.1
+typing==3.7.4.3
 urllib3==1.26.4
 w3lib==1.22.0
 zope.interface==5.4.0
