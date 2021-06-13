@@ -26,7 +26,11 @@ class AutoyoulaSpider(scrapy.Spider):
 
     def brand_parse(self, response):
         for item in (PAGINATION, CARS):
-            yield from self._get_follow(response, item["selector"], getattr(self, item["callback"]))
+            yield from self._get_follow(
+                response,
+                item["selector"],
+                getattr(self, item["callback"])
+            )
 
     def car_parse(self, response):
         loader = AutoyoulaLoader(response=response)

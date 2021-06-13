@@ -28,7 +28,11 @@ class HhRemoteSpider(scrapy.Spider):
 
     def parse(self, response):
         for item in (PAGINATION, VACANCY):
-            yield from self._get_follow(response, item["selector"], getattr(self, item["callback"]))
+            yield from self._get_follow(
+                response,
+                item["selector"],
+                getattr(self, item["callback"])
+            )
 
     def vacancy_parse(self, response):
         loader = HHVacancyLoader(response=response)

@@ -1,0 +1,1 @@
+from .avito import AvitoSpider
