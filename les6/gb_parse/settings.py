@@ -11,13 +11,12 @@ BOT_NAME = 'gb_parse_18_05'
 
 LOG_ENABLE = True
 LOG_LEVEL = "DEBUG"
-# LOG_FILE = 'log.txt'
 
 SPIDER_MODULES = ['gb_parse.spiders']
 NEWSPIDER_MODULE = 'gb_parse.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0"
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:88.0) Gecko/20100101 Firefox/88.0"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
