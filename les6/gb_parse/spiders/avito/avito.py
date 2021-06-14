@@ -1,5 +1,6 @@
 import pymongo
 import scrapy
+from .processors import get_phone_num
 
 from .xpath_selectors import APARTMENTS, PAGINATION, APARTMENT_DATA
 from .loaders import AvitoLoader
@@ -30,4 +31,5 @@ class AvitoSpider(scrapy.Spider):
         loader = AvitoLoader(response=response)
         for key, value in APARTMENT_DATA.items():
             loader.add_xpath(field_name=key, **value)
+        loader.add_value('phone_number', get_phone_num(response))
         yield loader.load_item()

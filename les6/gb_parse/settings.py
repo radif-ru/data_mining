@@ -6,12 +6,16 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import os
+from datetime import datetime
 
 BOT_NAME = 'gb_parse_18_05'
 
 LOG_ENABLE = True
 LOG_LEVEL = "DEBUG"
-# LOG_FILE = 'log.txt'
+if not os.path.isdir('logs'):
+    os.mkdir('logs')
+LOG_FILE = os.path.join('logs', f'{datetime.now().date().isoformat()}.log')
 
 SPIDER_MODULES = ['gb_parse.spiders']
 NEWSPIDER_MODULE = 'gb_parse.spiders'
@@ -30,7 +34,7 @@ CONCURRENT_REQUESTS = 16       # Для Avito, во избежание 429 ош�
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 # DOWNLOAD_DELAY = 0.2
-DOWNLOAD_DELAY = 3      # Для Avito, во избежание 429 ошибки
+DOWNLOAD_DELAY = 5      # Для Avito, во избежание 429 ошибки
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 CONCURRENT_REQUESTS_PER_DOMAIN = 8      # Для Avito, во избежание 429 ошибки
@@ -97,4 +101,5 @@ AUTOTHROTTLE_DEBUG = True
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 IMAGES_STORE = "images"
+PHONE_NUMBERS = os.path.join(IMAGES_STORE, 'phone_numbers')
 # ROTATING_PROXY_LIST_PATH = "proxies.txt"

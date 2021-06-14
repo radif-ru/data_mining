@@ -17,6 +17,7 @@ class AvitoLoader(ItemLoader):
     parameters_out = TakeFirst()
     author_link_in = MapCompose(create_author_link)
     author_link_out = TakeFirst()
+    phone_number_out = TakeFirst()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
