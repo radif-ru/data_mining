@@ -6,31 +6,40 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import os
+from datetime import datetime
 
 BOT_NAME = 'gb_parse_18_05'
 
 LOG_ENABLE = True
 LOG_LEVEL = "DEBUG"
+if not os.path.isdir('logs'):
+    os.mkdir('logs')
+# LOG_FILE = os.path.join('logs', f'{datetime.now().date().isoformat()}.log')
 
 SPIDER_MODULES = ['gb_parse.spiders']
 NEWSPIDER_MODULE = 'gb_parse.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = "Mozilla/5.1 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
+# CONCURRENT_REQUESTS = 16       # Для Avito, во избежание 429 ошибки
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY = 2
+# DOWNLOAD_DELAY = 5      # Для Avito, во избежание 429 ошибки
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
+# CONCURRENT_REQUESTS_PER_DOMAIN = 8      # Для Avito, во избежание 429 ошибки
 # CONCURRENT_REQUESTS_PER_IP = 16
+# CONCURRENT_REQUESTS_PER_IP = 8      # Для Avito, во избежание 429 ошибки
 
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = True
@@ -93,4 +102,5 @@ AUTOTHROTTLE_DEBUG = True
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 IMAGES_STORE = "images"
+PHONE_NUMBERS = os.path.join(IMAGES_STORE, 'phone_numbers')
 # ROTATING_PROXY_LIST_PATH = "proxies.txt"

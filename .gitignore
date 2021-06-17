@@ -29,6 +29,8 @@
 **/migrations
 
 # Виртуальное окружение проекта
+**/.env
+**/.venv
 **/env
 **/venv
 **/virtualenv
