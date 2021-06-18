@@ -9,7 +9,6 @@ from gb_parse.spiders.hh import HhRemoteSpider
 from gb_parse.spiders.avito import AvitoRealEstateSpider
 from gb_parse.spiders.instagram import InstagramSpider
 
-
 if __name__ == '__main__':
     dotenv.load_dotenv("gb_parse/spiders/instagram/.env")
     crawler_settings = Settings()
@@ -19,6 +18,7 @@ if __name__ == '__main__':
         InstagramSpider,
         login=os.getenv('LOGIN'),
         password=os.getenv('PASSWORD'),
-        tags=["kirkorow", ]
+        # tags=["pugachevaforever", ],
+        tags=["pugachevaforever", "kirkorow", ]
     )
     crawler_process.start()
