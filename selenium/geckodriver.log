@@ -1,0 +1,63 @@
+1623931329799	geckodriver	INFO	Listening on 127.0.0.1:22798
+1623931332832	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\23rad\\AppData\\Local\\Temp\\rust_mozprofileNhdRKU"
+1623931334235	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\23rad\\AppData\\Local\\Temp\\rust_mozprofileNhdRKU\\search.json.mozlz4", (void 0)))
+1623931339519	Marionette	INFO	Listening on port 22807
+1623931339747	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623931339837	geckodriver	INFO	Listening on 127.0.0.1:22835
+1623931342867	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\23rad\\AppData\\Local\\Temp\\rust_mozprofilecl3vj1"
+1623931343645	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\23rad\\AppData\\Local\\Temp\\rust_mozprofilecl3vj1\\search.json.mozlz4", (void 0)))
+1623931347271	Marionette	INFO	Listening on port 22851
+1623931347682	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1623931367928	geckodriver	INFO	Listening on 127.0.0.1:22994
+1623931370968	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\23rad\\AppData\\Local\\Temp\\rust_mozprofileym0BUe"
+1623931371799	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\23rad\\AppData\\Local\\Temp\\rust_mozprofileym0BUe\\search.json.mozlz4", (void 0)))
+1623931375766	Marionette	INFO	Listening on port 23002
+1623931376274	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623931407550	geckodriver	INFO	Listening on 127.0.0.1:23120
+1623931410604	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\23rad\\AppData\\Local\\Temp\\rust_mozprofileUlDu6o"
+1623931411346	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\23rad\\AppData\\Local\\Temp\\rust_mozprofileUlDu6o\\search.json.mozlz4", (void 0)))
+1623931415659	Marionette	INFO	Listening on port 23128
+1623931415885	Marionette	WARN	TLS certificate errors will be ignored for this session
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 108: Error: Got a request https://dr.habracdn.net/habr/oldassets/60c9fdb7/styles/main.bundle.css without a browsingContextID set
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://habr.com"
+console.error: "Tried to send a 'target-destroyed-form' event on an already destroyed actor 'watcher'"
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+[Parent 9168, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: "Action setSymbols had an exception:" (new Error("Current thread has paused or resumed", "resource://devtools/client/debugger/src/utils/context.js", 36))
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
+console.warn: "Already stopped listening to server sent events for this window."
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
+JavaScript error: resource://devtools/client/debugger/src/utils/context.js, line 36: Error: Current thread has paused or resumed
