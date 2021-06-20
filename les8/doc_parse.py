@@ -53,4 +53,5 @@ if __name__ == '__main__':
     pdf_path = Path(__file__).parent.joinpath("8416_4.pdf")
     images = pdf_images_extract(pdf_path, images_path)
     numbers = list(map(get_serial_numbers, images))
+    # numbers = sum(numbers, [])
     print(1)
