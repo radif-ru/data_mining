@@ -72,7 +72,7 @@ class InstagramSpider(scrapy.Spider):
                                   el['media']['image_versions2']['candidates']]
                         item_loader.add_value('photos', photos)
                     yield item_loader.load_item()
-
+            # TODO: Доработать пролистывание постов с тегами
             next_max_id = js_data['entry_data']['TagPage'][0]['data'][
                 'recent']['next_max_id']
             next_page = js_data['entry_data']['TagPage'][0]['data'][
