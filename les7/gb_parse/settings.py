@@ -16,7 +16,7 @@ LOG_LEVEL = "DEBUG"
 # LOG_LEVEL = "WARNING"
 if not os.path.isdir('logs'):
     os.mkdir('logs')
-LOG_FILE = os.path.join('logs', f'{datetime.now().date().isoformat()}.log')
+# LOG_FILE = os.path.join('logs', f'{datetime.now().date().isoformat()}.log')
 
 SPIDER_MODULES = ['gb_parse.spiders']
 NEWSPIDER_MODULE = 'gb_parse.spiders'

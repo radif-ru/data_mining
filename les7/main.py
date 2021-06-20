@@ -18,7 +18,7 @@ if __name__ == '__main__':
         InstagramSpider,
         login=os.getenv('LOGIN'),
         password=os.getenv('PASSWORD'),
-        # tags=["pugachevaforever", ],
-        tags=["pugachevaforever", "kirkorow", ]
+        tags=["pugachevaforever", ],
+        # tags=["pugachevaforever", "kirkorow", ]
     )
     crawler_process.start()
