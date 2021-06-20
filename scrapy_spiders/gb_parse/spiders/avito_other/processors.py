@@ -3,8 +3,8 @@ import os
 from urllib.parse import urljoin
 
 import requests
-from les6.gb_parse.settings import PHONE_NUMBERS
 from scrapy import Selector
+from scrapy_spiders.gb_parse.settings import PHONE_NUMBERS
 
 
 def clear_data(data: str) -> str:

@@ -58,7 +58,7 @@ class InstagramSpider(scrapy.Spider):
             data = js_data['entry_data']['TagPage'][0]['data']
             tag_loader.add_value('date_parse', date_parse)
             tag_loader.add_value('data', data)
-            # yield tag_loader.load_item()
+            yield tag_loader.load_item()
 
             for items in data['recent']['sections']:
                 for el in items['layout_content']['medias']:
@@ -71,7 +71,7 @@ class InstagramSpider(scrapy.Spider):
                         photos = [img['url'] for img in
                                   el['media']['image_versions2']['candidates']]
                         item_loader.add_value('photos', photos)
-                    # yield item_loader.load_item()
+                    yield item_loader.load_item()
             # TODO: Доработать пролистывание постов с тегами
             next_max_id = js_data['entry_data']['TagPage'][0]['data'][
                 'recent']['next_max_id']

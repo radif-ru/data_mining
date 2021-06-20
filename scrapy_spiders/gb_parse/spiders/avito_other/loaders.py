@@ -1,8 +1,7 @@
 from scrapy.loader import ItemLoader
 from itemloaders.processors import TakeFirst, MapCompose
 
-from les6.gb_parse.spiders.avito.processors import organize_data, \
-    create_author_link, clear_data
+from .processors import organize_data, create_author_link, clear_data
 
 
 class AvitoLoader(ItemLoader):
